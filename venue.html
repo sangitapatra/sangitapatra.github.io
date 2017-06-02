@@ -28,6 +28,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				});
 			});
 </script>
+<style>
+       #map {
+        height: 100%;
+        width: 100%;
+       }
+    </style>
 </head>
 <body>
 	<!--start-home-->
@@ -71,33 +77,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="ceremony">
 	     	<div class="container">
 			 <div class="blog-bottom">
-	        <div class="blog-left">
-	        	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14732.27519711054!2d88.41227!3d22.6139059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaf768c1edb2adb8f!2sGouri+Kunja!5e0!3m2!1sen!2sin!4v1487493934978" 
-	        	width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+	        <div class="blog-left" style="width:100%">
+	        	<!--<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14732.27519711054!2d88.41227!3d22.6139059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaf768c1edb2adb8f!2sGouri+Kunja!5e0!3m2!1sen!2sin!4v1487493934978" 
+	        	width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+	        	<div id="map"></div>
 	        </div>
-	        <span class="circle"></span>
-			<span class="devide-line"></span>
-	         <div class="blog-right">       	
-	        	<h6>30 June 2017</h6>
-	        	<h4>Wedding Ceremony</h4>
-	        	<p><strong>Gouri Kunja</strong>
-	        		<br>
-	        		Shyamnagar Rd, Shyam Nagar, Satgachi,
-	        		<br>
-	        		South Dum Dum,
-	        		<br>
-	        		Kolkata, West Bengal 700055
-	        	</p>
-	        </div>
+	        
+	         
 	        <div class="clearfix"></div>
          </div>
          <div class="blog-bottom">
-	        <span class="circle"></span>
-			<span class="devide-line"></span>
-	         <div class="blog-right">       	
-	        	 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.90871341199!2d88.41385964332584!3d22.61988381704403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89e1bdf1a018d%3A0x908eb7283957435e!2sShrachi+Garden%2C+Anand+Vihar%2C+Notun+Pally%2C+Satgachi%2C+South+Dum+Dum%2C+Kolkata%2C+West+Bengal+700028!5e0!3m2!1sen!2sin!4v1487494130173" width="100%" height="260" frameborder="0" style="border:0" allowfullscreen></iframe>
-	        </div>
-			 <div class="blog-left second">
+         	<div class="blog-right">       	
 	        	<h6>2 July 2017</h6>
 	        	<h4>Reception</h4>
 	        	<p><strong>Shrachi Garden</strong>
@@ -107,6 +97,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	        		Satgachi, South Dum Dum,
 	        		<br>
 	        		Kolkata, West Bengal 700028
+	        	</p>
+	        </div>
+	        <span class="circle"></span>
+			<span class="devide-line"></span>
+	         
+			 <div class="blog-left second">
+	        	<h6>30 June 2017</h6>
+	        	<h4>Wedding Ceremony</h4>
+	        	<p><strong>Gouri Kunja</strong>
+	        		<br>
+	        		5, Shyamnagar Road,
+	        		<br>
+	        		South Dum Dum,
+	        		<br>
+	        		Kolkata, West Bengal 700055
 	        	</p>
 	        </div>
 	        <div class="clearfix"></div>
@@ -179,6 +184,217 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								</script>
 		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
+		<script>
+      function initMap() {
+        var his = {lat: 22.61908164, lng: 88.41537778};
+		var her = {lat: 22.6139059, lng: 88.41227};
 
+		var locations = [
+      ['Wedding', 22.6139059, 88.41227, 1],
+      ['Reception', 22.61908164, 88.41537778, 2]
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: new google.maps.LatLng(22.616, 88.413),
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      styles: [  
+   {  
+      "featureType":"administrative",
+      "elementType":"labels.text.fill",
+      "stylers":[  
+         {  
+            "gamma":"1.42"
+         },
+         {  
+            "lightness":"11"
+         },
+         {  
+            "saturation":"-100"
+         }
+      ]
+   },
+   {  
+      "featureType":"administrative",
+      "elementType":"labels.text.stroke",
+      "stylers":[  
+         {  
+            "visibility":"off"
+         }
+      ]
+   },
+   {  
+      "featureType":"administrative.country",
+      "elementType":"geometry.stroke",
+      "stylers":[  
+         {  
+            "lightness":-5
+         },
+         {  
+            "color":"#b0b0b0"
+         },
+         {  
+            "weight":1.7
+         }
+      ]
+   },
+   {  
+      "featureType":"administrative.country",
+      "elementType":"labels.text.stroke",
+      "stylers":[  
+         {  
+            "visibility":"off"
+         }
+      ]
+   },
+   {  
+      "featureType":"administrative.province",
+      "elementType":"all",
+      "stylers":[  
+         {  
+            "visibility":"off"
+         }
+      ]
+   },
+   {  
+      "featureType":"landscape",
+      "elementType":"geometry",
+      "stylers":[  
+         {  
+            "hue":"#ff0000"
+         },
+         {  
+            "lightness":"0"
+         },
+         {  
+            "saturation":"70"
+         }
+      ]
+   },
+   {  
+      "featureType":"poi",
+      "elementType":"geometry",
+      "stylers":[  
+         {  
+            "color":"#FFB3B3"
+         }
+      ]
+   },
+   {  
+      "featureType":"poi",
+      "elementType":"labels.text.stroke",
+      "stylers":[  
+         {  
+            "visibility":"off"
+         }
+      ]
+   },
+   {  
+      "featureType":"road",
+      "elementType":"labels.text.stroke",
+      "stylers":[  
+         {  
+            "visibility":"on"
+         }
+      ]
+   },
+   {  
+      "featureType":"road.highway",
+      "elementType":"all",
+      "stylers":[  
+         {  
+            "color":"#FFB3B3"
+         }
+      ]
+   },
+   {  
+      "featureType":"road.arterial",
+      "elementType":"all",
+      "stylers":[  
+         {  
+            "visibility":"on"
+         },
+         {  
+            "color":"#ffb3b3"
+         }
+      ]
+   },
+   {  
+      "featureType":"road.local",
+      "elementType":"all",
+      "stylers":[  
+         {  
+            "visibility":"on"
+         },
+         {  
+            "color":"#ffb3b3"
+         }
+      ]
+   },
+   {  
+      "featureType":"transit",
+      "elementType":"all",
+      "stylers":[  
+         {  
+            "visibility":"on"
+         }
+      ]
+   },
+   {  
+      "featureType":"transit",
+      "elementType":"labels.text.stroke",
+      "stylers":[  
+         {  
+            "visibility":"off"
+         }
+      ]
+   },
+   {  
+      "featureType":"water",
+      "elementType":"geometry",
+      "stylers":[  
+         {  
+            "color":"#FFB3B3"
+         },
+         {  
+            "lightness":66
+         }
+      ]
+   },
+   {  
+      "featureType":"water",
+      "elementType":"labels.text.stroke",
+      "stylers":[  
+         {  
+            "visibility":"off"
+         }
+      ]
+   }
+]
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) { 
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+	}	
+		
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCs5FCtCIeMdBtQtIzhSmRSo69AAK2aqYg&callback=initMap">
+    </script>
 </body>
 </html>
