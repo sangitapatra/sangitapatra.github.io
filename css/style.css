@@ -518,7 +518,7 @@ select option {
 .welcome-top {
     text-align: center;
     margin: 0 auto;
-    padding: 5em 0 5em 26em;
+    padding: 1em 0 5em 26em;
 }
 .welcome-top h2 {
     text-align: center;
@@ -1582,7 +1582,7 @@ ul.bottom i {
 }
 @media (max-width:1024px){
 	.welcome-top {
-		padding: 5em 0 5em 21em;
+		padding: 1em 0 5em 21em;
 	}
 	.banner-info {
 		margin-top: 5em;
@@ -1732,7 +1732,7 @@ ul.bottom i {
 	font-size:1.8em;
 	}
 	.welcome-top {
-		padding: 4em 0 4em 18em;
+		padding: 1em 0 4em 18em;
 	}
 	.welcome-top a {
 		padding: 13px 17px;
@@ -1952,7 +1952,7 @@ ul.bottom i {
 		font-size: 2.4em;
 	}
 	.welcome-top {
-		padding: 4em 0 4em 15em;
+		padding: 1em 0 4em 15em;
 	}
 	.registry-text {
 		padding: 0.5em 0.5em;
@@ -2130,7 +2130,7 @@ ul.bottom i {
 		min-height: 254px;
 	}
 	.welcome-top {
-		padding: 3em 0 3em 13em;
+		padding: 1em 0 3em 13em;
 	}
 	.registry-text h6 {
 		font-size: 1.5em;
@@ -2324,7 +2324,7 @@ ul.bottom i {
 		width: 77%;
 	}
 	.welcome-top {
-		padding: 3em 0 3em 10em;
+		padding: 1em 0 3em 10em;
 	}
 	.registry-section {
 		padding: 3em 0 0 0;
@@ -2482,7 +2482,7 @@ ul.bottom i {
 		width: 65.5%;
 	}
 	.welcome-top {
-		padding: 2em 0 2em 8em;
+		padding: 1em 0 2em 8em;
 	}
 	.callbacks_nav.prev {
 		right: auto;
@@ -3038,7 +3038,7 @@ ul.bottom i {
 		font-size: 1.8em;
 	}
 	.welcome-top {
-		padding: 2em 0 2em 6em;
+		padding: 1em 0 2em 6em;
 	}
 	.welcome-top a {
 		padding: 13px 13px;
@@ -3266,7 +3266,7 @@ ul.bottom i {
 		font-size: 1.8em;
 	}
 	.welcome-top {
-		padding: 2em 0 2em 6em;
+		padding: 1em 0 2em 6em;
 	}
 	.welcome-top a {
 		padding: 13px 13px;
